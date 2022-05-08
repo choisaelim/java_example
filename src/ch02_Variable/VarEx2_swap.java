@@ -8,7 +8,7 @@ class VarEx2_swap {
 	
 		System.out.println("x:"+ x + " y:" + y);
 		
-		//º¯¼ö swap ¿¹Á¦
+		//ë³€ìˆ˜ swap
 		tmp = x;
 		x = y;
 		y = tmp;

@@ -8,10 +8,10 @@ class OverflowEx {
 		char  cMax = 65535;
 
 		System.out.println("sMin  = " + sMin);
-		//�ּҰ� - 1 = �ִ밪
+		//최소값 - 1 > 오버플로우 = 최대값
 		System.out.println("sMin-1= " + (short)(sMin-1));
 		System.out.println("sMax  = " + sMax);
-		//�ִ밪 + 1 = �ּҰ�
+		//최대값 + 1 > 오버플로우 = 최소값
 		System.out.println("sMax+1= " + (short)(sMax+1));
 		System.out.println("cMin  = " + (int)cMin);
 		System.out.println("cMin-1= " + (int)--cMin);
