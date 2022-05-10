@@ -1,23 +1,24 @@
 package ch05_array;
+
 class ArrayEx01_outofBound {
-	public static void main(String[] args) { 
+	public static void main(String[] args) {
 		int[] score = new int[5];
 		int k = 1;
 
 		score[0] = 50;
 		score[1] = 60;
-		score[k+1] = 70;   // score[2] = 70
+		score[k + 1] = 70; // score[2] = 70
 		score[3] = 80;
 		score[4] = 90;
 
-		int tmp = score[k+2] + score[4];  // int tmp = score[3] + score[4]
+		int tmp = score[k + 2] + score[4]; // int tmp = score[3] + score[4]
 
-	    // for¹®À¸·Î ¹è¿­ÀÇ ¸ðµç ¿ä¼Ò¸¦ Ãâ·ÂÇÑ´Ù.
-		for(int i=0; i < 5; i++) {
-			System.out.printf("score[%d]:%d%n",i, score[i]);		
+		// forë¬¸ìœ¼ë¡œ ë°°ì—´ì˜ ëª¨ë“  ìš”ì†Œë¥¼ ì¶œë ¥í•œë‹¤.
+		for (int i = 0; i < 5; i++) {
+			System.out.printf("score[%d]:%d%n", i, score[i]);
 		}
 
 		System.out.printf("tmp:%d%n", tmp);
-		System.out.printf("score[%d]:%d%n",7,score[7]); //indexÀÇ ¹üÀ§¸¦ ¹þ¾î³­ °ª
+		System.out.printf("score[%d]:%d%n", 7, score[7]); // indexì˜ ë²”ìœ„ë¥¼ ë²—ì–´ë‚œ ê°’
 	} // main
 }

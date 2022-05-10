@@ -14,9 +14,8 @@ class ReferenceParamEx {
 
 	}
 
-	static void change(Data d) { // ÂüÁ¶Çü ¸Å°³º¯¼ö
+	static void change(Data d) { // ì°¸ì¡°í˜• ë§¤ê°œë³€ìˆ˜
 		d.x = 1000;
 		System.out.println("change() : x = " + d.x);
 	}
 }
-

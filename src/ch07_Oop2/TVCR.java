@@ -1,21 +1,41 @@
 package ch07_Oop2;
-class Tv2 {
-	boolean power; 	// Àü¿ø»óÅÂ(on/off)
-	int channel;		// Ã¤³Î
 
-	void power()       { 	power = !power; }
-	void channelUp()   { 	++channel; 		}
-	void channelDown() {	--channel; 		}
+class Tv2 {
+	boolean power; // ì „ì›ìƒíƒœ(on/off)
+	int channel; // ì±„ë„
+
+	void power() {
+		power = !power;
+	}
+
+	void channelUp() {
+		++channel;
+	}
+
+	void channelDown() {
+		--channel;
+	}
 }
 
 class VCR {
-	boolean power; 	// Àü¿ø»óÅÂ(on/off)
-   int counter = 0;
-	void power() { 	power = !power; }
-	void play()  { /* ³»¿ë»ı·«*/ }
-	void stop()  { /* ³»¿ë»ı·«*/ }
-	void rew()   { /* ³»¿ë»ı·«*/ }
-	void ff()    { /* ³»¿ë»ı·«*/ }
+	boolean power; // ì „ì›ìƒíƒœ(on/off)
+	int counter = 0;
+
+	void power() {
+		power = !power;
+	}
+
+	void play() {
+		/* ë‚´ìš©ìƒëµ */ }
+
+	void stop() {
+		/* ë‚´ìš©ìƒëµ */ }
+
+	void rew() {
+		/* ë‚´ìš©ìƒëµ */ }
+
+	void ff() {
+		/* ë‚´ìš©ìƒëµ */ }
 }
 
 class TVCR extends Tv2 {
@@ -28,13 +48,13 @@ class TVCR extends Tv2 {
 
 	void stop() {
 		vcr.stop();
-   }
+	}
 
 	void rew() {
 		vcr.rew();
-   }
+	}
 
 	void ff() {
-		vcr.ff();	
-   }
+		vcr.ff();
+	}
 }

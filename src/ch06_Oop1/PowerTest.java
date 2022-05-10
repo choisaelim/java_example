@@ -1,20 +1,22 @@
 package ch06_Oop1;
-class PowerTest { 
-	public static void main(String[] args) { 
-		int x = 2; 
-		int n = 5; 
-		long result = 0; 
 
-		for(int i=1; i<=n; i++) { 
-			result += power(x, i); 
-		} 
+class PowerTest {
+	public static void main(String[] args) {
+		int x = 2;
+		int n = 5;
+		long result = 0;
 
-		System.out.println(result); 
-	} 
+		for (int i = 1; i <= n; i++) {
+			result += power(x, i);
+		}
 
-	static long power(int x, int n) { 
-		if(n==1) return x; 
+		System.out.println(result);
+	}
 
-		return x * power(x, n-1);
-	} 
+	static long power(int x, int n) {
+		if (n == 1)
+			return x;
+
+		return x * power(x, n - 1);
+	}
 }
