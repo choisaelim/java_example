@@ -1,18 +1,20 @@
 package ch10_Dateformat;
+
+import java.util.*;
 import java.text.*;
 
-class ChoiceFormatEx1 {
+class n {
 	public static void main(String[] args) {
-		double[] limits = {60, 70, 80, 90};	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å« ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
-		// limits, gradesï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß¾ï¿½ï¿½ ï¿½Ñ´ï¿½. 
-		String[] grades = {"D", "C", "B", "A"};	
-		
-		int[] scores = { 100, 95, 88, 70, 52, 60, 70};
+		double[] limits = { 60, 70, 80, 90 }; // ³·Àº °ªºÎÅÍ Å« °ªÀÇ ¼ø¼­·Î Àû¾î¾ßÇÑ´Ù.
+		// limits, grades°£ÀÇ ¼ø¼­¿Í °³¼ö¸¦ ¸ÂÃß¾î¾ß ÇÑ´Ù.
+		String[] grades = { "D", "C", "B", "A" };
+
+		int[] scores = { 100, 95, 88, 70, 52, 60, 70 };
 
 		ChoiceFormat form = new ChoiceFormat(limits, grades);
 
-		for(int i=0;i<scores.length;i++) {
-			System.out.println(scores[i]+":"+form.format(scores[i]));		
+		for (int i = 0; i < scores.length; i++) {
+			System.out.println(scores[i] + ":" + form.format(scores[i]));
 		}
 	} // main
 }

@@ -1,31 +1,32 @@
 package ch10_Dateformat;
+
 import java.util.*;
 import java.text.*;
 
 class DateFormatEx4 {
 	public static void main(String[] args) {
-		String pattern = "yyyy/MM/dd"; 
+		String pattern = "yyyy/MM/dd";
 		DateFormat df = new SimpleDateFormat(pattern);
 		Scanner s = new Scanner(System.in);
 
 		Date inDate = null;
 
-		System.out.println("ï¿½ï¿½Â¥ï¿½ï¿½ " + pattern + "ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.(ï¿½Ô·Â¿ï¿½:2015/12/31)");
-		while(s.hasNextLine()) {
+		System.out.println("³¯Â¥¸¦ " + pattern + "ÀÇ ÇüÅÂ·Î ÀÔ·ÂÇØÁÖ¼¼¿ä.(ÀÔ·Â¿¹:2015/12/31)");
+		while (s.hasNextLine()) {
 			try {
 				inDate = df.parse(s.nextLine());
 				break;
-			} catch(Exception e) {
-				System.out.println("ï¿½ï¿½Â¥ï¿½ï¿½ " + pattern + "ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.(ï¿½Ô·Â¿ï¿½:2015/12/31)");
+			} catch (Exception e) {
+				System.out.println("³¯Â¥¸¦ " + pattern + "ÀÇ ÇüÅÂ·Î ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.(ÀÔ·Â¿¹:2015/12/31)");
 			}
 		} // while
 
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(inDate);
-		
-		Calendar today = Calendar.getInstance();
-        long day = (cal.getTimeInMillis() - today.getTimeInMillis())/(60*60*1000);
 
-		System.out.println("ï¿½Ô·ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ "+ day +"ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
+		Calendar today = Calendar.getInstance();
+		long day = (cal.getTimeInMillis() - today.getTimeInMillis()) / (60 * 60 * 1000);
+
+		System.out.println("ÀÔ·ÂÇÏ½Å ³¯Â¥´Â ÇöÀç¿Í " + day + "½Ã°£ Â÷ÀÌ°¡ ÀÖ½À´Ï´Ù.");
 	} // main
 }

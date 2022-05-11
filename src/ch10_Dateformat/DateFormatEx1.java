@@ -1,4 +1,5 @@
 package ch10_Dateformat;
+
 import java.util.*;
 import java.text.*;
 
@@ -10,17 +11,17 @@ class DateFormatEx1 {
 		SimpleDateFormat sdf5, sdf6, sdf7, sdf8, sdf9;
 
 		sdf1 = new SimpleDateFormat("yyyy-MM-dd");
-		sdf2 = new SimpleDateFormat("''yyï¿½ï¿½ MMM ddï¿½ï¿½ Eï¿½ï¿½ï¿½ï¿½");
+		sdf2 = new SimpleDateFormat("''yy³â MMM ddÀÏ E¿äÀÏ");
 		sdf3 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 		sdf4 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
 
-		sdf5 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Dï¿½ï¿½Â° ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
-		sdf6 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ dï¿½ï¿½Â° ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
-		sdf7 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ wï¿½ï¿½Â° ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
-		sdf8 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Wï¿½ï¿½Â° ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
-		sdf9 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Fï¿½ï¿½Â° Eï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+		sdf5 = new SimpleDateFormat("¿À´ÃÀº ¿Ã ÇØÀÇ D¹øÂ° ³¯ÀÔ´Ï´Ù.");
+		sdf6 = new SimpleDateFormat("¿À´ÃÀº ÀÌ ´ÞÀÇ d¹øÂ° ³¯ÀÔ´Ï´Ù.");
+		sdf7 = new SimpleDateFormat("¿À´ÃÀº ¿Ã ÇØÀÇ w¹øÂ° ÁÖÀÔ´Ï´Ù.");
+		sdf8 = new SimpleDateFormat("¿À´ÃÀº ÀÌ ´ÞÀÇ W¹øÂ° ÁÖÀÔ´Ï´Ù.");
+		sdf9 = new SimpleDateFormat("¿À´ÃÀº ÀÌ ´ÞÀÇ F¹øÂ° E¿äÀÏÀÔ´Ï´Ù.");
 
-		System.out.println(sdf1.format(today));	// format(Date d)
+		System.out.println(sdf1.format(today)); // format(Date d)
 		System.out.println(sdf2.format(today));
 		System.out.println(sdf3.format(today));
 		System.out.println(sdf4.format(today));

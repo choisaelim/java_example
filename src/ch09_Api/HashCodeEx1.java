@@ -1,4 +1,5 @@
-package ch09_Api;
+﻿package ch09_Api;
+
 class HashCodeEx1 {
 	public static void main(String[] args) {
 		String str1 = new String("abc");

@@ -1,31 +1,32 @@
 package ch10_Dateformat;
+
 import java.util.*;
 
-class  CalendarEx4 {
+class CalendarEx4 {
 	public static void main(String[] args) {
 		Calendar date = Calendar.getInstance();
 
-		date.set(2005, 7, 31);	// 2005ï¿½ï¿½ 8ï¿½ï¿½ 31ï¿½ï¿½
-		
+		date.set(2005, 7, 31); // 2005³â 8¿ù 31ÀÏ
+
 		System.out.println(toString(date));
-		System.out.println("= 1ï¿½ï¿½ ï¿½ï¿½ =");
+		System.out.println("= 1ÀÏ ÈÄ =");
 		date.add(Calendar.DATE, 1);
 		System.out.println(toString(date));
 
-		System.out.println("= 6ï¿½ï¿½ ï¿½ï¿½ =");
+		System.out.println("= 6´Þ Àü =");
 		date.add(Calendar.MONTH, -6);
 		System.out.println(toString(date));
 
-		System.out.println("= 31ï¿½ï¿½ ï¿½ï¿½(roll) =");
+		System.out.println("= 31ÀÏ ÈÄ(roll) =");
 		date.roll(Calendar.DATE, 31);
 		System.out.println(toString(date));
 
-		System.out.println("= 31ï¿½ï¿½ ï¿½ï¿½(add) =");
+		System.out.println("= 31ÀÏ ÈÄ(add) =");
 		date.add(Calendar.DATE, 31);
 		System.out.println(toString(date));
 	}
 
 	public static String toString(Calendar date) {
-		return date.get(Calendar.YEAR)+"ï¿½ï¿½ "+ (date.get(Calendar.MONTH)+1) +"ï¿½ï¿½ " + date.get(Calendar.DATE) + "ï¿½ï¿½";
+		return date.get(Calendar.YEAR) + "³â " + (date.get(Calendar.MONTH) + 1) + "¿ù " + date.get(Calendar.DATE) + "ÀÏ";
 	}
 }

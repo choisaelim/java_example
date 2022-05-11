@@ -1,21 +1,23 @@
 package ch10_Dateformat;
+
 import java.time.*;
+import java.time.temporal.*;
 
 class NewTimeEx2 {
 	public static void main(String[] args) {
-		LocalDate date = LocalDate.of(2015, 12, 31); // 2015ï¿½ï¿½ 12ï¿½ï¿½ 31ï¿½ï¿½
-		LocalTime time = LocalTime.of(12,34,56);     // 12ï¿½ï¿½ 23ï¿½ï¿½ 56ï¿½ï¿½
+		LocalDate date = LocalDate.of(2015, 12, 31); // 2015³â 12¿ù 31ÀÏ
+		LocalTime time = LocalTime.of(12, 34, 56); // 12½Ã 23ºÐ 56ÃÊ
 
-		// 2015ï¿½ï¿½ 12ï¿½ï¿½ 31ï¿½ï¿½ 12ï¿½ï¿½ 23ï¿½ï¿½ 56ï¿½ï¿½
-		LocalDateTime dt  = LocalDateTime.of(date, time);
-	
+		// 2015³â 12¿ù 31ÀÏ 12½Ã 23ºÐ 56ÃÊ
+		LocalDateTime dt = LocalDateTime.of(date, time);
+
 		ZoneId zid = ZoneId.of("Asia/Seoul");
 		ZonedDateTime zdt = dt.atZone(zid);
-//		String strZid = zdt.getZone().getId();
+		// String strZid = zdt.getZone().getId();
 
 		ZonedDateTime seoulTime = ZonedDateTime.now();
 		ZoneId nyId = ZoneId.of("America/New_York");
-	     ZonedDateTime nyTime = ZonedDateTime.now().withZoneSameInstant(nyId);
+		ZonedDateTime nyTime = ZonedDateTime.now().withZoneSameInstant(nyId);
 
 		// ZonedDatetime -> OffsetDateTime
 		OffsetDateTime odt = zdt.toOffsetDateTime();
